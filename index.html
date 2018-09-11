@@ -7,8 +7,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/main.css"/>
     <link href="https://fonts.googleapis.com/css?family=Oxygen" rel="stylesheet">
+    <script src="scripts.js" async></script>
 </head>
-<body>
+<body onresize="showMenu()">
     <header id="main-header" role="banner">
         <div class="logo-wrapper">
             <h1><b>VOTE</b><div id="small-oswego">&nbspOSWEGO.</div></h1>
@@ -17,22 +18,22 @@
         <nav id="main-nav-mobile" role="navigation">
             <h2 class="hidden-tag">Site Navigation</h2>
             <ul>
-                <li><a href="" title="Menu" class="menu">MENU</a></li>
-                <li><a href="" title="Search" class="search-link">Q</a></li>
+                <li><a href="#" title="Menu" class="menu" onclick="dropDownMenu()">MENU</a></li>
+                <li><a href="#" title="Search" class="search-link">Q</a></li>
             </ul>
         </nav>
         <nav id="main-nav" role="navigation">
             <h2 class="hidden-tag">Site Navigation</h2>
             <ul>
-                <li><a href="" title="Home Page" class="current">Home</a></li> 
+                <li><a href="#" title="Home Page" class="current">Home</a></li> 
                 <!-- Include Our Mission -->
-                <li><a href="" title="Voting Information">Voting Information</a></li>  
+                <li><a href="#" title="Voting Information">Voting Information</a></li>  
                 <!-- Include (1)What we serve (2)Who we serve (3)When to vote & register (4)Where to go (5)How to do --> 
-                <li><a href="" title="Reasons to Vote">Why Vote?</a></li>
-                <li><a href="" title="Frequently Asked Questions">FAQs</a></li>
-                <li><a href="" title="Get Involved in Vote Oswego">Join Us</a></li>
-                <li><a href="" title="Contact Us">Contact Us</a></li>
-                <li><a href="" title="Search" class="search-link">Q</a></li>
+                <li><a href="#" title="Reasons to Vote">Why Vote?</a></li>
+                <li><a href="#" title="Frequently Asked Questions">FAQs</a></li>
+                <li><a href="#" title="Get Involved in Vote Oswego">Join Us</a></li>
+                <li><a href="#" title="Contact Us">Contact Us</a></li>
+                <li><a href="#" title="Search" class="search-link" id="main-nav-search">Q</a></li>
             </ul>
         </nav>
     </header> 
