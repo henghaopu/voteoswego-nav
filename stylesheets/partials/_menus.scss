@@ -1,0 +1,17 @@
+/* 
+    menus 
+*/
+/* Global Link Styles */
+a {
+    color: $global-link-color;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+a:focus {
+    outline: thin dotted;
+}
+
+a:hover, a:active {
+    outline: 0;
+}
