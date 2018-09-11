@@ -10,3 +10,15 @@
 h1, h2, h3, h4 {
     font-weight: normal;
 }
+
+nav li {
+    // no bullet points 
+    list-style: none;
+    // display horizontally 
+    display: inline;
+}
+
+nav a {
+    // no underbar 
+    text-decoration: none;
+}

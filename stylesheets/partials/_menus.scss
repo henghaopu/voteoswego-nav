@@ -1,11 +1,10 @@
 /* 
     menus 
 */
-/* Global Link Styles */
+// Global Link Styles 
 a {
     color: $global-link-color;
     font-weight: bold;
-    text-decoration: none;
 }
 
 a:focus {
@@ -14,4 +13,23 @@ a:focus {
 
 a:hover, a:active {
     outline: 0;
+}
+
+nav a {
+    // define link regions 
+    display: inline-block;
+    // align links vertically 
+    line-height: $line-height-h4;
+    // 0.725 / 2 = 0.3625 
+    padding: 0.3625em 0.725em;
+}
+
+nav a:hover {
+    background: lightblue;
+    text-decoration: underline;
+    transform: translateX();
+}
+
+.current {
+    text-decoration: underline;
 }
