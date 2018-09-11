@@ -5,6 +5,10 @@
 a {
     color: $global-link-color;
     font-weight: bold;
+    // test gradient test
+    //background: linear-gradient(to bottom, #eb262a 40%, #295da9 60%);
+	//-webkit-background-clip: text;
+	//-webkit-text-fill-color: transparent;
 }
 
 a:focus {
@@ -13,6 +17,10 @@ a:focus {
 
 a:hover, a:active {
     outline: 0;
+}
+
+a:hover {
+    color: $light-grey;
 }
 
 #main-nav-mobile a, #main-nav a {
@@ -29,15 +37,15 @@ a:hover, a:active {
     display: block;
 }
 
-nav a:hover {
-    background: rgb(238, 248, 252);
+//nav a:hover {
+    //background: rgb(238, 248, 252);
     //text-decoration: underline;
-    transform: translateX();
-}
+    //transform: translateY(-3px);
+//}
 
-.current {
+//.current {
     //text-decoration: underline;
-}
+//}
 
 // accessibility
 .hidden-tag {
@@ -67,7 +75,7 @@ li > a:before {
     height: 1.5px;
     bottom: 0;
     left: 0;
-    background: $red;
+    background: $light-grey;
     visibility: hidden;
     -webkit-transform: scaleX(0);
             transform: scaleX(0);

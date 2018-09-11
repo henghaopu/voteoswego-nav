@@ -41,7 +41,7 @@ nav a {
     menus 
 */
 a {
-  color: #eb262a;
+  color: #58595b;
   font-weight: bold;
 }
 
@@ -51,6 +51,10 @@ a:focus {
 
 a:hover, a:active {
   outline: 0;
+}
+
+a:hover {
+  color: #757677;
 }
 
 #main-nav-mobile a, #main-nav a {
@@ -64,12 +68,6 @@ a:hover, a:active {
 
 #main-nav a {
   display: block;
-}
-
-nav a:hover {
-  background: #eef8fc;
-  -webkit-transform: translateX();
-          transform: translateX();
 }
 
 .hidden-tag {
@@ -95,7 +93,7 @@ li > a:before {
   height: 1.5px;
   bottom: 0;
   left: 0;
-  background: #eb262a;
+  background: #757677;
   visibility: hidden;
   -webkit-transform: scaleX(0);
   transform: scaleX(0);
