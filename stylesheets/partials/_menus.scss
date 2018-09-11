@@ -15,21 +15,53 @@ a:hover, a:active {
     outline: 0;
 }
 
-nav a {
-    // define link regions 
-    display: inline-block;
+#main-nav-mobile a, #main-nav a {
     // align links vertically 
     line-height: $line-height-h4;
     // 0.725 / 2 = 0.3625 
     padding: 0.3625em 0.725em;
 }
+#main-nav-mobile a {
+    // define link regions 
+    display: inline-block;
+}
+#main-nav a {
+    display: block;
+}
 
 nav a:hover {
-    background: lightblue;
+    background: rgb(238, 248, 252);
     text-decoration: underline;
     transform: translateX();
 }
 
 .current {
     text-decoration: underline;
+}
+
+// accessibility
+.hidden-tag {
+    display: none;
+}
+
+// styling
+
+// center nav
+#main-nav ul, #main-nav-mobile ul {
+    text-align: center;
+}
+
+.search-link {
+    font-family: $search-font;
+}
+
+@media screen and (min-width: 800px) {
+
+    #main-nav-mobile {
+        display: none;
+    }
+
+    #main-nav a {
+        display: inline-block;
+    }
 }

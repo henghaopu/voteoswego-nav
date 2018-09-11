@@ -11,9 +11,16 @@ h1, h2, h3, h4 {
     font-weight: normal;
 }
 
-nav li {
+#main-nav {
+    display: none;
+}
+
+#main-nav-mobile li, #main-nav li {
     // no bullet points 
     list-style: none;
+}
+
+#main-nav-mobile li {
     // display horizontally 
     display: inline;
 }
@@ -21,4 +28,15 @@ nav li {
 nav a {
     // no underbar 
     text-decoration: none;
+}
+
+@media screen and (min-width: 800px) {
+    #main-nav {
+        display: block;
+    }
+    
+    #main-nav li {
+        // display horizontally 
+        display: inline;
+    }
 }
