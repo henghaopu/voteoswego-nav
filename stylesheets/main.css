@@ -12,28 +12,32 @@ h1, h2, h3, h4 {
   font-weight: normal;
 }
 
-#main-nav {
-  display: none;
+p {
+  margin: 1.45rem;
 }
 
-#main-nav-mobile li, #main-nav li {
-  list-style: none;
-}
-
-#main-nav-mobile li {
-  display: inline;
-}
-
-nav a {
+header a, nav a {
   text-decoration: none;
 }
 
-@media screen and (min-width: 800px) {
-  #main-nav {
+nav, nav ul ul {
+  display: none;
+}
+
+nav ul {
+  list-style: none;
+}
+
+@media screen and (min-width: 768px) {
+  nav {
     display: block;
   }
-  #main-nav li {
-    display: inline;
+  nav > ul {
+    width: 768px;
+    margin: 0 auto;
+  }
+  nav > ul > li {
+    float: left;
   }
 }
 
@@ -57,16 +61,16 @@ a:hover {
   color: #757677;
 }
 
-#main-nav-mobile a, #main-nav a {
+header a, nav a {
   line-height: 2.175rem;
   padding: 0.3625em 0.725em;
 }
 
-#main-nav-mobile a {
+header a {
   display: inline-block;
 }
 
-#main-nav a {
+nav a {
   display: block;
 }
 
@@ -74,7 +78,42 @@ a:hover {
   display: none;
 }
 
-#main-nav ul, #main-nav-mobile ul {
+body header {
+  margin: 0.3625rem;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 96px auto 96px;
+      grid-template-columns: 96px auto 96px;
+  line-height: 2.9rem;
+}
+
+header > #logo-wrapper {
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 1;
+  grid-column: 1 / 2;
+}
+
+#logo-wrapper > a {
+  margin: 0;
+  padding: 0;
+}
+
+#logo-wrapper img {
+  display: inline-block;
+  position: relative;
+  width: 100%;
+  vertical-align: middle;
+}
+
+header > a {
+  display: inline-block;
+  -ms-grid-column: 3;
+  -ms-grid-column-span: 1;
+  grid-column: 3 / 4;
+  text-align: center;
+}
+
+nav ul {
   text-align: center;
 }
 
@@ -108,12 +147,41 @@ li > a:focus:before {
   transform: scaleX(1);
 }
 
-@media screen and (min-width: 800px) {
-  #main-nav-mobile {
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: white;
+  opacity: 0.9;
+}
+
+.blank-space {
+  height: 3.625rem;
+}
+
+@media screen and (min-width: 768px) {
+  header > a {
     display: none;
   }
-  #main-nav a {
+  nav {
+    height: 2.9rem;
+  }
+  nav a {
     display: inline-block;
+  }
+  nav ul ul {
+    position: absolute;
+    background: white;
+    opacity: 0.9;
+  }
+  header > #logo-wrapper {
+    -ms-grid-column: 2;
+    -ms-grid-column-span: 1;
+    grid-column: 2 / 3;
+    text-align: center;
+  }
+  body header {
+    line-height: 8.7rem;
   }
 }
 

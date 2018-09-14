@@ -23,17 +23,17 @@ a:hover {
     color: $light-grey;
 }
 
-#main-nav-mobile a, #main-nav a {
+header a, nav a {
     // align links vertically 
     line-height: $line-height-h4;
     // 0.725 / 2 = 0.3625 
     padding: 0.3625em 0.725em;
 }
-#main-nav-mobile a {
+header a {
     // define link regions 
     display: inline-block;
 }
-#main-nav a {
+nav a {
     display: block;
 }
 
@@ -54,8 +54,37 @@ a:hover {
 
 // styling
 
+body header {
+    margin: $margin-thin; // at least 0.064 inches = 6.144px  
+    display: grid;
+    grid-template-columns: 96px auto 96px;
+    line-height: $line-height-h3;
+}
+
+header > #logo-wrapper {
+    grid-column: 1 / 2;
+}
+
+#logo-wrapper > a {
+    margin: 0;
+    padding: 0;
+}
+
+#logo-wrapper img {
+    display: inline-block;
+    position: relative;
+    width: 100%;
+    vertical-align: middle;
+}
+
+header > a {
+    display: inline-block;
+    grid-column: 3 / 4;
+    text-align: center;
+}
+
 // center nav
-#main-nav ul, #main-nav-mobile ul {
+nav ul {
     text-align: center;
 }
 
@@ -90,13 +119,50 @@ li > a:focus:before {
             transform: scaleX(1);
 }
 
-@media screen and (min-width: 800px) {   
+// drop down animation (yet implement)
 
-    #main-nav-mobile {
+// sticky menu bar
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: white;
+    opacity: 0.9;
+}
+
+// blank
+.blank-space {
+    height: $line-height-h2;
+}
+
+@media screen and (min-width: $laptop-screen) {   
+    header > a {
+        // hide in medium screen
         display: none;
     }
 
-    #main-nav a {
+    nav {
+        height: $line-height-h3;
+    }
+
+    nav a {
+        // define link regions 
         display: inline-block;
+    }
+
+
+    nav ul ul {
+        position: absolute;
+        background: white;
+        opacity: 0.9;
+    }
+
+    header > #logo-wrapper {
+        grid-column: 2 / 3;
+        text-align: center;
+    }
+
+    body header {
+        line-height: $line-height-h1 * 2;
     }
 }

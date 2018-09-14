@@ -9,33 +9,43 @@
     <link href="https://fonts.googleapis.com/css?family=Oxygen" rel="stylesheet">
     <script src="scripts.js" async></script>
 </head>
-<body onresize="showMenu()">
-    <header id="main-header" role="banner">
-        <div class="logo-wrapper">
-            <h1><b>VOTE</b><div id="small-oswego">&nbspOSWEGO.</div></h1>
-        </div>
+<body onresize="showMenuBar()" onload="isSticky()">
+    <div class="">
+        <header role="banner" id="main-header">
+            <div id="logo-wrapper">
+                <a href="#"><img src="images/vote-oswego-logo.svg" alt="Vote Oswego"></a>
+            </div>
+            <a href="#" title="Menu" id="menu" onclick="dropDown()">MENU</a>     
+        </header> 
         <a href="#content" title="Skip to Content" class="hidden-tag">Skip to Content</a>
-        <nav id="main-nav-mobile" role="navigation">
-            <h2 class="hidden-tag">Site Navigation</h2>
-            <ul>
-                <li><a href="#" title="Menu" class="menu" onclick="dropDownMenu()">MENU</a></li>
-                <li><a href="#" title="Search" class="search-link">Q</a></li>
-            </ul>
-        </nav>
         <nav id="main-nav" role="navigation">
             <h2 class="hidden-tag">Site Navigation</h2>
             <ul>
                 <li><a href="#" title="Home Page" class="current">Home</a></li> 
-                <!-- Include Our Mission -->
-                <li><a href="#" title="Voting Information">Voting Information</a></li>  
-                <!-- Include (1)What we serve (2)Who we serve (3)When to vote & register (4)Where to go (5)How to do --> 
+                <li>
+                    <a href="#" title="Voting Information" onclick="dropDown()">Voting Information +</a>
+                    <ul>
+                        <li><a href="#">What we do</a></li>
+                        <li><a href="#">Who we serve</a></li>
+                        <li><a href="#">When to vote & register</a></li>
+                        <li><a href="#">Where to vote</a></li>
+                        <li><a href="#">How to vote</a></li>
+                    </ul>
+                </li>  
                 <li><a href="#" title="Reasons to Vote">Why Vote?</a></li>
                 <li><a href="#" title="Frequently Asked Questions">FAQs</a></li>
                 <li><a href="#" title="Get Involved in Vote Oswego">Join Us</a></li>
                 <li><a href="#" title="Contact Us">Contact Us</a></li>
-                <li><a href="#" title="Search" class="search-link" id="main-nav-search">Q</a></li>
             </ul>
-        </nav>
-    </header> 
+        </nav> 
+    </div> 
+    <div id="blank-header-space" class=""></div>
+    <main>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Enim tortor at auctor urna nunc id. Diam quis enim lobortis scelerisque. Bibendum neque egestas congue quisque egestas diam. Viverra maecenas accumsan lacus vel facilisis volutpat. Commodo quis imperdiet massa tincidunt nunc pulvinar sapien et. Amet mauris commodo quis imperdiet massa tincidunt nunc. Et tortor at risus viverra adipiscing at in tellus. In egestas erat imperdiet sed euismod nisi porta. Amet justo donec enim diam vulputate ut. Pharetra et ultrices neque ornare. Massa id neque aliquam vestibulum morbi blandit cursus. Semper quis lectus nulla at volutpat diam ut venenatis tellus. Congue quisque egestas diam in arcu cursus euismod. Arcu bibendum at varius vel pharetra vel turpis nunc eget. Tempus quam pellentesque nec nam. Nisi scelerisque eu ultrices vitae auctor. Dui accumsan sit amet nulla facilisi.</p>
+        <p>Id consectetur purus ut faucibus pulvinar. Tortor pretium viverra suspendisse potenti nullam ac tortor vitae. Mollis nunc sed id semper risus. Auctor urna nunc id cursus metus aliquam eleifend. Nunc vel risus commodo viverra. Dolor sit amet consectetur adipiscing elit pellentesque habitant morbi. Eros in cursus turpis massa tincidunt dui ut. Integer vitae justo eget magna fermentum iaculis. Faucibus a pellentesque sit amet. Elit scelerisque mauris pellentesque pulvinar pellentesque habitant morbi tristique. Mauris ultrices eros in cursus. Vitae elementum curabitur vitae nunc sed velit dignissim. Pellentesque habitant morbi tristique senectus. Imperdiet dui accumsan sit amet nulla facilisi morbi. Sem fringilla ut morbi tincidunt. Congue quisque egestas diam in arcu cursus. Nam aliquam sem et tortor consequat id.</p>
+        <p>Augue eget arcu dictum varius duis at. Etiam sit amet nisl purus in mollis nunc sed. Suspendisse interdum consectetur libero id. Ullamcorper a lacus vestibulum sed. Pellentesque habitant morbi tristique senectus et netus et malesuada fames. Nunc sed blandit libero volutpat. Habitant morbi tristique senectus et netus et. Non tellus orci ac auctor. Nulla malesuada pellentesque elit eget gravida cum sociis. Id donec ultrices tincidunt arcu non sodales. Sem viverra aliquet eget sit amet tellus.</p>
+        <p>Massa massa ultricies mi quis hendrerit dolor magna eget. At imperdiet dui accumsan sit. Porta lorem mollis aliquam ut porttitor. Viverra justo nec ultrices dui. Felis imperdiet proin fermentum leo vel orci porta non pulvinar. Magna sit amet purus gravida quis. Augue interdum velit euismod in pellentesque massa. Aliquam sem et tortor consequat id porta nibh venenatis. Egestas sed sed risus pretium quam vulputate dignissim suspendisse. Sit amet venenatis urna cursus eget nunc scelerisque.</p>
+        <p>Sed libero enim sed faucibus turpis in eu mi bibendum. Elementum pulvinar etiam non quam lacus. Eget nullam non nisi est sit amet facilisis. Ante metus dictum at tempor commodo ullamcorper. Purus gravida quis blandit turpis cursus in hac habitasse. Eget arcu dictum varius duis at consectetur lorem donec. Eget nunc lobortis mattis aliquam faucibus purus in massa tempor. Interdum consectetur libero id faucibus nisl. Quis viverra nibh cras pulvinar mattis nunc sed blandit libero. Odio ut enim blandit volutpat maecenas. Aenean vel elit scelerisque mauris pellentesque pulvinar. Eu tincidunt tortor aliquam nulla facilisi cras fermentum.</p>
+    </main>
 </body>
 </html>

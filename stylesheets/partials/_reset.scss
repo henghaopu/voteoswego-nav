@@ -11,32 +11,42 @@ h1, h2, h3, h4 {
     font-weight: normal;
 }
 
-#main-nav {
-    display: none;
+p {
+    margin: $line-height-body;
 }
 
-#main-nav-mobile li, #main-nav li {
-    // no bullet points 
-    list-style: none;
-}
-
-#main-nav-mobile li {
-    // display horizontally 
-    display: inline;
-}
-
-nav a {
+header a, nav a {
     // no underbar 
     text-decoration: none;
 }
 
-@media screen and (min-width: 800px) {
-    #main-nav {
+nav, nav ul ul {
+    // hide in small screen
+    display: none;
+}
+
+nav ul {
+    // no bullet points 
+    list-style: none;
+}
+
+@media screen and (min-width: $laptop-screen) {
+    nav {
+        // show up in medium screen
         display: block;
     }
-    
-    #main-nav li {
+
+    nav > ul {
+        width: $laptop-screen;
+        margin: 0 auto;
+    }
+
+    nav > ul > li {
         // display horizontally 
-        display: inline;
+        // mothod 1
+        //display: inline;
+
+        // mothod 2
+        float: left;
     }
 }

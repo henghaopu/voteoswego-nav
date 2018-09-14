@@ -1,24 +1,45 @@
-var dropDownMenu = () => {
-    
-    var mainNav = document.querySelector('#main-nav');
-    var mainNavSearch = document.querySelector('#main-nav-search');
+const laptopScreenWidth = 768;
 
-    if (mainNav.style.display === "none" || mainNav.style.display === "") {
-        mainNav.style.display = "block";
-        mainNavSearch.style.display = "none";
+let dropDown = () => {
+    //let element = event.target.nextElementSibling;
+    let element = null;
+    let title = event.target.title;
+    switch (title) {
+        case 'Menu':
+        element = document.querySelector('#main-nav');
+        break;
+        case 'Voting Information':
+        element = event.target.nextElementSibling;
+        break;
+    }
+    if (element.style.display === "none" || element.style.display === "") {
+        element.style.display = "block";
     } else {
-        mainNav.style.display = "none";
-        mainNavSearch.style.display = "inline-block";
+        element.style.display = "none";
     }
 }
 
-var showMenu = () => {
-    var mainNav = document.querySelector('#main-nav');
-    if (window.outerWidth >= 800) {
+let showMenuBar = () => {
+    let mainNav = document.querySelector('#main-nav');
+    let stickyDiv = document.querySelector('#main-header').parentElement;
+    let blankSpace = document.querySelector('#blank-header-space');
+    console.log(stickyDiv);
+    if (window.outerWidth >= laptopScreenWidth) {
         mainNav.style.display = "block";
-        mainNavSearch.style.display = "inline-block";
-    } else if (window.outerWidth < 800) {
+        stickyDiv.classList.remove('sticky');
+        blankSpace.classList.remove('blank-space');
+    } else if (window.outerWidth < laptopScreenWidth) {
         mainNav.style.display = "none";
-        mainNavSearch.style.display = "none";
+        stickyDiv.classList.add('sticky');
+        blankSpace.classList.add('blank-space');
     }
+}
+
+let isSticky = () => {
+    let stickyDiv = document.querySelector('#main-header').parentElement;
+    let blankSpace = document.querySelector('#blank-header-space');
+    if (window.outerWidth < laptopScreenWidth) {
+        stickyDiv.classList.add('sticky');
+        blankSpace.classList.add('blank-space');
+    } 
 }
