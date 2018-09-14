@@ -14,6 +14,8 @@ h1, h2, h3, h4 {
 
 p {
   margin: 1.45rem;
+  margin-left: 0.3625rem;
+  margin-right: 0.3625rem;
 }
 
 header a, nav a {
@@ -195,7 +197,7 @@ html {
 }
 
 p {
-  font-size: 1.125rem;
+  font-size: 0.95625rem;
   line-height: 1.45rem;
 }
 
