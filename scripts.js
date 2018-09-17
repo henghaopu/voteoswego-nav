@@ -23,7 +23,7 @@ let showMenuBar = () => {
     let mainNav = document.querySelector('#main-nav');
     let stickyDiv = document.querySelector('#main-header').parentElement;
     let blankSpace = document.querySelector('#blank-header-space');
-    console.log(stickyDiv);
+    //console.log(stickyDiv);
     if (window.outerWidth >= laptopScreenWidth) {
         mainNav.style.display = "block";
         stickyDiv.classList.remove('sticky');

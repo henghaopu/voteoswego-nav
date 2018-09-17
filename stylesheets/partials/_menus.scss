@@ -25,9 +25,11 @@ a:hover {
 
 header a, nav a {
     // align links vertically 
-    line-height: $line-height-h4;
+    line-height: $line-height-body;
+    //font-size: $font-size-body;
     // 0.725 / 2 = 0.3625 
-    padding: 0.3625em 0.725em;
+    //padding: 0.3625em 0.725em;
+    padding: 0.725em;
 }
 header a {
     // define link regions 
@@ -55,7 +57,8 @@ nav a {
 // styling
 
 body header {
-    margin: $margin-thin; // at least 0.064 inches = 6.144px  
+    margin: $margin-thin; // at least 0.064 inches = 6.144px
+    margin-left: $line-height-body; 
     display: grid;
     grid-template-columns: 96px auto 96px;
     line-height: $line-height-h3;
@@ -81,15 +84,12 @@ header > a {
     display: inline-block;
     grid-column: 3 / 4;
     text-align: center;
+
 }
 
 // center nav
 nav ul {
     text-align: center;
-}
-
-.search-link {
-    font-family: $search-font;
 }
 
 // link animation
@@ -127,7 +127,7 @@ li > a:focus:before {
     top: 0;
     width: 100%;
     background: white;
-    opacity: 0.9;
+    //opacity: 0.9;
 }
 
 // blank
@@ -154,7 +154,7 @@ li > a:focus:before {
     nav ul ul {
         position: absolute;
         background: white;
-        opacity: 0.9;
+        //opacity: 0.9;
     }
 
     header > #logo-wrapper {

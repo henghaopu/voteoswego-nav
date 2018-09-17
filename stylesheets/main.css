@@ -14,8 +14,6 @@ h1, h2, h3, h4 {
 
 p {
   margin: 1.45rem;
-  margin-left: 0.3625rem;
-  margin-right: 0.3625rem;
 }
 
 header a, nav a {
@@ -64,8 +62,8 @@ a:hover {
 }
 
 header a, nav a {
-  line-height: 2.175rem;
-  padding: 0.3625em 0.725em;
+  line-height: 1.45rem;
+  padding: 0.725em;
 }
 
 header a {
@@ -82,6 +80,7 @@ nav a {
 
 body header {
   margin: 0.3625rem;
+  margin-left: 1.45rem;
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 96px auto 96px;
@@ -119,10 +118,6 @@ nav ul {
   text-align: center;
 }
 
-.search-link {
-  font-family: "Oxygen", sans-serif;
-}
-
 li {
   position: relative;
 }
@@ -154,7 +149,6 @@ li > a:focus:before {
   top: 0;
   width: 100%;
   background: white;
-  opacity: 0.9;
 }
 
 .blank-space {
@@ -174,7 +168,6 @@ li > a:focus:before {
   nav ul ul {
     position: absolute;
     background: white;
-    opacity: 0.9;
   }
   header > #logo-wrapper {
     -ms-grid-column: 2;
@@ -224,13 +217,4 @@ h4 {
 /* 
     headers
 */
-#main-header h1, #main-header h3 {
-  text-align: center;
-  color: #58595b;
-}
-
-#small-oswego {
-  font-size: 2.25rem;
-  line-height: 2.9rem;
-}
 /*# sourceMappingURL=main.css.map */
