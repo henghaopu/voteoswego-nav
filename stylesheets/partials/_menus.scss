@@ -58,7 +58,6 @@ nav a {
 
 body header {
     margin: $margin-thin; // at least 0.064 inches = 6.144px
-    margin-left: $line-height-body; 
     display: grid;
     grid-template-columns: 96px auto 96px;
     line-height: $line-height-h3;

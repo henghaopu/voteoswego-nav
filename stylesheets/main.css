@@ -14,6 +14,8 @@ h1, h2, h3, h4 {
 
 p {
   margin: 1.45rem;
+  margin-left: 0.725rem;
+  margin-right: 0.725rem;
 }
 
 header a, nav a {
@@ -79,8 +81,7 @@ nav a {
 }
 
 body header {
-  margin: 0.3625rem;
-  margin-left: 1.45rem;
+  margin: 0.725rem;
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 96px auto 96px;

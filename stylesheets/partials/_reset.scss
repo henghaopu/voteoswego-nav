@@ -13,6 +13,8 @@ h1, h2, h3, h4 {
 
 p {
     margin: $line-height-body;
+    margin-left: $margin-thin;
+    margin-right:$margin-thin;
 }
 
 header a, nav a {
