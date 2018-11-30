@@ -23,12 +23,14 @@ let showMenuBar = () => {
     let mainNav = document.querySelector('#main-nav');
     let stickyDiv = document.querySelector('#main-header').parentElement;
     let blankSpace = document.querySelector('#blank-header-space');
+    // var test = document.querySelector('#test');
+    // test.innerHTML = 'in: ' + window.innerWidth + ' out: ' + window.outerWidth +  ' testtesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttesttest';
     //console.log(stickyDiv);
-    if (window.outerWidth >= laptopScreenWidth) {
+    if (window.innerWidth >= laptopScreenWidth) {
         mainNav.style.display = "block";
         stickyDiv.classList.remove('sticky');
         blankSpace.classList.remove('blank-space');
-    } else if (window.outerWidth < laptopScreenWidth) {
+    } else if (window.innerWidth < laptopScreenWidth) {
         mainNav.style.display = "none";
         stickyDiv.classList.add('sticky');
         blankSpace.classList.add('blank-space');
@@ -38,8 +40,9 @@ let showMenuBar = () => {
 let isSticky = () => {
     let stickyDiv = document.querySelector('#main-header').parentElement;
     let blankSpace = document.querySelector('#blank-header-space');
-    if (window.outerWidth < laptopScreenWidth) {
+    if (window.outerWidth <= laptopScreenWidth) {
         stickyDiv.classList.add('sticky');
         blankSpace.classList.add('blank-space');
     } 
+    showMenuBar();
 }
